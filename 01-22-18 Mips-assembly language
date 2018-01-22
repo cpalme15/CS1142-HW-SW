@@ -1,0 +1,42 @@
+subject: MIPS and Assembly language
+Date: 1/22/17
+ISA contact between hardware and software
+specifies hardware resources
+  - memory, registers
+ISA doesn't specify how things are implemented
+  - physical
+  -electrical
+  - speed, temp
+advantages to ISA
+  - allows software to work on any microarchitecture
+  - provides binary compatibility
+  - even if source code no longer available 
+MIPS instruction set architecture (ISA)
+ -Microprosser without Interlocked Pipeline Stages
+ -RISC, Reduced Instruction Set Computer
+ MIPS ISA : Memory
+  - Organized in Bytes
+  -Each byte has an address
+  - bits are dont have an address
+  a word=4 bytes
+  big endian byte order: big end most significant byte comes first in order.
+  little endian  small end comes firsst
+  MIPS is bi-endian does either based on CPU setting. Mars does little endian.
+  Registers
+    - small, fast memory device inside CPU
+    - 32 general-purpose registers each storing 32 bits
+    - Register 0 always contains 32 zeros
+  Special Registers
+    - PC-Program Counter
+    - hi and lo 
+      - used by multiply and divide instructions
+ syntax:
+  label : operation operand, operand
+  label is optional 
+    -can jump to labels
+  comments starts with #
+  start:
+        add $t2,$t0,$t1
+        
+ 
+    
