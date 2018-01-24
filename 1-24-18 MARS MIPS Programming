@@ -1,0 +1,38 @@
+Subject: MARS MIPS , IDE , I/O, Math,loops
+date: 1-24-18
+
+#- for comments
+
+# Name : Collin Palmer
+# Username: ckpalmer
+# Description: Demo for the 1142 lecture
+
+addi $t0,$0,123 # $t0<- 0 +123
+addi $t1,$0,10 # #t1<- 0+10 into t1  addi=add immediate
+add $10, $t0,$t1 #sum t0 and t1 and put in t2
+addi- useful when trying to put a number into a register
+addu= unsigned add
+subu= unsigned sub
+div= divides puts quotient into lo register, remainder put in hi register
+second step to movee to general register
+mflo - move lo to general
+mfhi- move hi to general
+mult-multiply
+
+pseudo instructions
+li -load immediate value into register
+move - copy value from one register to another
+
+I/O 
+  syscall(takes no operands)
+  - I/O service is determined by value in $v0 must put value in in v0 to tell what type of data type
+  - may result in changing register
+  - $a0 is where you put the integer you want to print 
+  -v0 gets overwritten with result.
+  - terminate execution 
+        li $v0 10
+        syscall
+  branch on equal instruction
+    -beq $reg1, $reg2, target
+    if reg1=reg2 go to target
+    targets are labels.
