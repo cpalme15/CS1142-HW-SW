@@ -1,0 +1,9 @@
+.data # .data = starts a section of data
+
+num1: .word 123 #.word allocates 4 bytes init to 123
+lw $r1,label+x -load word at address label+x into $r1
+sw- store word at address
+nums: .word 123,456,0 # array of 3 words starts at label nums
+nums(0) is label num[1] is label+4  4 bytes per word
+.space 40 saves you 40 bytes or an array of 10 things
+.align 2 # 2^2=4 word alignment next address will be divisble by 2^2=4
